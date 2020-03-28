@@ -19,4 +19,4 @@ app.get('/', async (req, res) => {
     res.send({ v: 1, notes })
 })
 
-app.listen(3000, () => { console.log('Server is running...') });
+http.createServer(app).listen(process.env.PORT || 8000)
