@@ -7,6 +7,8 @@ const http = require('http')
 const app = express();
 app.use(express.json()); // Make sure it comes back as json
 
+
+console.log("the value for db : ", process.env.DB)
 mongoose.connect(process.env.DB, {
   useNewUrlParser: true
 });
